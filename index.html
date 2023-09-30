@@ -8,37 +8,321 @@
     <!-- @push('meta') -->
     <!-- /meta.blade.php -->
 
-    <title>Panel <!-- @section("title") --></title>
+    <!-- <title>@section("title") </title> -->
+    <title>Panel</title>
 
     <!-- stylesheet -->
     <!-- @include('web.partials.css') -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/css" />
+    <style>
+      :root {
+        --primary-color: #1e8fc6;
+        --secondary-color: #36a9e1;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/styles.min.css" type="text/css" />
     <!-- @push('css') -->
     <!-- /stylesheet -->
   </head>
   <body>
+    <div class="row">
 
-    <!-- topbar -->
-    <!-- @includes('web.includes.topbar') -->
-    <!-- /topbar -->
+      <!-- sidebar -->
+      <!-- @include('web.includes.sidebar') -->
+      <div class="md:col-span-2 bg-slate-800 text-white h-screen overflow-y-scroll pb-40 sidebar">
+        <div class="bg-slate-200">
+          <img
+            src="./assets/img/main_image.png"
+            alt="Kolme"
+            class="w-3/5 mx-auto px-1 py-2"
+          />
+        </div>
+        <div class="row text-blue-500">
+          <div class="col-span-4 text-center">
+            <a
+              href="#"
+              class="inline-block p-3 hover:bg-slate-100 hover:text-black duration-300 w-full"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+          <div class="col-span-4 text-center">
+            <a
+              href="#"
+              class="inline-block p-3 hover:bg-slate-100 hover:text-black duration-300 w-full"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+          <div class="col-span-4 text-center">
+            <a
+              href="#"
+              class="inline-block p-3 hover:bg-slate-100 hover:text-black duration-300 w-full"
+            >
+              <i class="fa-solid fa-building"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-2 gap-1 mx-2">
+          <div class="col-span-12 text-xs font-bold py-3">
+            <div>
+              <span>Benvenuto</span>
+              <span>Mahbub Rashid Tonoy</span>
+            </div>
+            <div>
+              <span>Partner:</span>
+              <span>Smart Trading</span>
+            </div>
+          </div>
+          <div class="col-span-3">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">14</span>
+              <span class="block text-blue-400">Untied</span>
+            </div>
+          </div>
+          <div class="col-span-3">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">0</span>
+              <span class="block text-blue-400">Tied</span>
+            </div>
+          </div>
+          <div class="col-span-3">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">0</span>
+              <span class="block text-blue-400">Fisse</span>
+            </div>
+          </div>
+          <div class="col-span-3">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">14</span>
+              <span class="block text-blue-400">Very</span>
+            </div>
+          </div>
+          <div class="col-span-6">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">$4.530</span>
+              <span class="block text-blue-400">Fido</span>
+            </div>
+          </div>
+          <div class="col-span-6">
+            <div class="border-[1px] border-blue-400 text-center">
+              <span class="block font-bold">$3</span>
+              <span class="block text-blue-400">Ricariche</span>
+            </div>
+          </div>
+          <div class="col-span-12">
+            <div class="text-center">
+              <a
+                href="#"
+                class="text-white bg-blue-500 py-2 text-center rounded-sm inline-block w-full my-2 mx-auto text-sm font-bold"
+                >I Miei Numeri</a
+              >
+            </div>
+            <div class="text-blue-400 text-sm font-bold">
+              <a href="#" class="mr-2">
+                <i class="fa-solid fa-lock"></i>
+                Cambia password
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-power-off"></i>
+                Esci
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li class="block text-xs opacity-70 text-white pt-8 px-2 pb-2">
+            Dashboard
+          </li>
+          <li>
+            <a href="#" class="active">
+              <i class="fa-solid fa-gauge"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-file"></i>
+              <span>Items 1</span>
+            </a>
+          </li>
+          <li class="block text-xs opacity-70 text-white pt-5 px-2 pb-2">
+            Pages
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-gauge"></i>
+              <span>Edit Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:">
+              <i class="fa-brands fa-pagelines"></i>
+              <span>Items 2</span>
+            </a>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-pagelines"></i>
+                  <span>Items 3</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-pagelines"></i>
+                  <span>Items 4</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-pagelines"></i>
+                  <span>Items 5</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-pagelines"></i>
+                      <span>Items 6</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-pagelines"></i>
+                      <span>Items 7</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-pagelines"></i>
+                      <span>Items 8</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /sidebar -->
 
+      <!-- main -->
+      <div class="col-span-12 md:col-span-10 bg-slate-100 h-screen overflow-y-scroll">
+        <div class="p-4 m-4 rounded-md shadow-md shadow-slate-300 bg-white">
+          <!-- @yield('main') -->
+            <!-- home tab -->
+              <!-- @include('web.includes.home._tab') -->
+              <div class="mainTab">
+                <ul>
+                  <li><a class="active" href="javascript:">Home</a></li>
+                  <li><a href="#">Apple</a></li>
+                  <li><a href="#">Welcome</a></li>
+                  <li><a href="#">Offerte in courso</a></li>
+                  <li><a href="#">Listini</a></li>
+                  <li><a href="#">Video Formativi</a></li>
+                  <li><a href="#">Academy</a></li>
+                  <li><a href="#">Guide e Produce</a></li>
+                  <li><a href="#">Module Utili</a></li>
+                  <li><a href="#">Link Utili</a></li>
+                  <li><a href="#">Trade Marketing</a></li>
+                  <li><a href="#">Installatori FWA</a></li>
+                </ul>
+              </div>
+            <!-- /home tab -->
+            <div class="row">
+              <div class="col-span-12 text-center text-4xl font-bold text-primary mt-4 mb-3">Ciao Mobile</div>
+              <div class="col-span-6">
+                <div class="m-4 shadow-md shadow-slate-300 categories flex">
+                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+                  </div>
+                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                    <img src="./assets/img/categories/01.jpg" class="w-full" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-span-6">
+                <div class="m-4 shadow-md shadow-slate-300 categories flex">
+                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+                  </div>
+                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                    <img src="./assets/img/categories/02.jpg" class="w-full" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-span-6">
+                <div class="m-4 shadow-md shadow-slate-300 categories flex">
+                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+                  </div>
+                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                    <img src="./assets/img/categories/03.jpg" class="w-full" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-span-6">
+                <div class="m-4 shadow-md shadow-slate-300 categories flex">
+                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+                  </div>
+                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                    <img src="./assets/img/categories/04.jpg" class="w-full" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          <!-- /@yield('main') -->
 
-    <!-- sidebar -->
-    <!-- @includes('web.includes.sidebar') -->
-    <!-- /sidebar -->
-
-
-    <!-- main -->
-    <!-- @yield('main') -->
-    <!-- /main -->
-
+        </div>
+        <!-- footer -->
+        <!-- @include('web.partials.footer') -->
+        <div class="mt-10 w-full bg-white p-3 flex items-center justify-between">
+          <div class="font-bold text-slate-700">Copyright &copy; Multivendor Ecommerce <!-- {{$appname}} --></div>
+          <div>Developed By: <b><a class="text-primary" href="http://w3asolution.com" target="_blank">W3aSolution</a></b></div>
+        </div>
+        <!-- /footer -->
+      </div>
+      <!-- /main -->
+    </div>
 
     <!-- javascript -->
     <!-- @include('web.partials.js') -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <!-- @push('js') -->
     <!-- /javascript -->

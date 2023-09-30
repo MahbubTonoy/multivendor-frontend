@@ -2,7 +2,12 @@
 module.exports = {
   content: ["*.{html,.blade.php}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary":"var(--primary-color)",
+        "secondary":"var(--secondary-color)"
+      }
+    },
   },
   plugins: [],
 };

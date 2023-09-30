@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* universal utilities */
+.customContainer {
+  @apply container mx-auto px-3 md:px-0;
+}
+.row {
+  @apply grid grid-cols-12;
+}
+
+
+.sidebar ul li a.active {
+  @apply bg-pink-500 hover:bg-pink-400 duration-300;
+}
+.fa-chevron-right{
+  rotate: 0deg;
+  @apply mr-3 duration-150;
+}
+.fa-chevron-right.rotateArrow{
+  rotate: 90deg !important;
+}
+.sidebar ul li>a {
+  @apply flex py-2 px-3 hover:bg-slate-700 duration-150 items-center;
+}
+.sidebar ul li>a span{
+  @apply inline-block ml-2 flex-1;
+}
+.sidebar ul ul {
+  @apply ml-3 text-sm hidden;
+}
+.mainTab {
+  @apply text-sm text-slate-500;
+}
+.mainTab ul{
+  @apply inline-flex;
+}
+.mainTab ul li a {
+  @apply inline-block p-2 rounded-t-sm border-[1px] border-transparent border-b-slate-200;
+}
+.mainTab ul li a.active {
+  @apply inline-block p-2 rounded-t-sm border-[1px] border-b-transparent border-slate-200;
+}
+
+.categories_menu {
+  @apply opacity-0 duration-300;
+}
+.categories:hover .categories_menu {
+  @apply opacity-100;
+}
