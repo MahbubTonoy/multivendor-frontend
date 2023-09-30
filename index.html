@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.blade.php -->
+    <!-- @include('admin.partials.meta') -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @push('meta') -->
+    <!-- /meta.blade.php -->
+
+    <title>Panel <!-- @section("title") --></title>
+
+    <!-- stylesheet -->
+    <!-- @include('web.partials.css') -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/css" />
+    <link rel="stylesheet" href="assets/css/styles.min.css" type="text/css" />
+    <!-- @push('css') -->
+    <!-- /stylesheet -->
+  </head>
+  <body>
+
+    <!-- topbar -->
+    <!-- @includes('web.includes.topbar') -->
+    <!-- /topbar -->
+
+
+    <!-- sidebar -->
+    <!-- @includes('web.includes.sidebar') -->
+    <!-- /sidebar -->
+
+
+    <!-- main -->
+    <!-- @yield('main') -->
+    <!-- /main -->
+
+
+    <!-- javascript -->
+    <!-- @include('web.partials.js') -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- @push('js') -->
+    <!-- /javascript -->
+  </body>
+</html>
