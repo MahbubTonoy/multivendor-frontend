@@ -34,10 +34,10 @@
   @apply text-sm text-slate-500;
 }
 .mainTab ul{
-  @apply inline-flex;
+  @apply w-full inline-flex overflow-x-scroll pb-4;
 }
 .mainTab ul li a {
-  @apply inline-block p-2 rounded-t-sm border-[1px] border-transparent border-b-slate-200;
+  @apply inline-block p-2 whitespace-nowrap rounded-t-sm border-[1px] border-transparent border-b-slate-200;
 }
 .mainTab ul li a.active {
   @apply inline-block p-2 rounded-t-sm border-[1px] border-b-transparent border-slate-200;
