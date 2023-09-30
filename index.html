@@ -33,12 +33,16 @@
     <!-- /stylesheet -->
   </head>
   <body>
-    <div class="row">
+    <div class="row relative">
 
       <!-- sidebar -->
       <!-- @include('web.includes.sidebar') -->
-      <div class="md:col-span-2 bg-slate-800 text-white h-screen overflow-y-scroll pb-40 sidebar">
-        <div class="bg-slate-200">
+      <input type="checkbox" id="sidebarToggle" class="hidden">
+      <div class="absolute top-0 right-full w-full md:static md:col-span-2 bg-slate-800 text-white h-screen overflow-y-scroll pb-40 sidebar duration-300 z-30">
+        <div class="bg-slate-200 relative">
+          <label for="sidebarToggle" class="md:hidden cursor-pointer absolute top-2 right-2">
+            <i class="fa-solid fa-circle-xmark  text-2xl text-slate-800"></i>
+          </label>
           <img
             src="./assets/img/main_image.png"
             alt="Kolme"
@@ -215,6 +219,10 @@
 
       <!-- main -->
       <div class="col-span-12 md:col-span-10 bg-slate-100 h-screen overflow-y-scroll">
+        <label for="sidebarToggle" class="mx-4 mt-4 inline-flex gap-2 cursor-pointer items-center md:hidden bg-white rounded-md p-3">
+          <i class="fa-solid fa-bars"></i>
+          Menu
+        </label>
         <div class="p-4 m-4 rounded-md shadow-md shadow-slate-300 bg-white">
           <!-- @yield('main') -->
             <!-- home tab -->
@@ -238,66 +246,66 @@
             <!-- /home tab -->
             <div class="row">
               <div class="col-span-12 text-center text-4xl font-bold text-primary mt-4 mb-3">Ciao Mobile</div>
-              <div class="col-span-6">
-                <div class="m-4 shadow-md shadow-slate-300 categories flex">
-                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+              <div class="col-span-12 md:col-span-6 pt-5 md:pt-0">
+                <div class="md:m-4 shadow-md shadow-slate-300 categories md:flex">
+                  <div class="w-full md:w-[10%] categories_menu my-3 text-slate-500 relative z-0 flex md:block">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px] md:mt-3"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-play"></i></a>
                   </div>
-                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                  <a href="#" class="w-full md:w-[90%] ml-auto my-3 relative z-10">
                     <img src="./assets/img/categories/01.jpg" class="w-full" alt="">
                   </a>
                 </div>
               </div>
-              <div class="col-span-6">
-                <div class="m-4 shadow-md shadow-slate-300 categories flex">
-                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+              <div class="col-span-12 md:col-span-6 pt-5 md:pt-0">
+                <div class="md:m-4 shadow-md shadow-slate-300 categories md:flex">
+                  <div class="w-full md:w-[10%] categories_menu my-3 text-slate-500 relative z-0 flex md:block">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px] md:mt-3"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-play"></i></a>
                   </div>
-                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                  <a href="#" class="w-full md:w-[90%] ml-auto my-3 relative z-10">
                     <img src="./assets/img/categories/02.jpg" class="w-full" alt="">
                   </a>
                 </div>
               </div>
-              <div class="col-span-6">
-                <div class="m-4 shadow-md shadow-slate-300 categories flex">
-                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+              <div class="col-span-12 md:col-span-6 pt-5 md:pt-0">
+                <div class="md:m-4 shadow-md shadow-slate-300 categories md:flex">
+                  <div class="w-full md:w-[10%] categories_menu my-3 text-slate-500 relative z-0 flex md:block">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px] md:mt-3"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-play"></i></a>
                   </div>
-                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                  <a href="#" class="w-full md:w-[90%] ml-auto my-3 relative z-10">
                     <img src="./assets/img/categories/03.jpg" class="w-full" alt="">
                   </a>
                 </div>
               </div>
-              <div class="col-span-6">
-                <div class="m-4 shadow-md shadow-slate-300 categories flex">
-                  <div class="w-[10%] categories_menu my-3 text-slate-500 relative z-0">
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl mt-3 ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-print"></i></a>
-                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 rounded-l-md border-slate-200 border-[1px]"><i class="fa-solid fa-play"></i></a>
+              <div class="col-span-12 md:col-span-6 pt-5 md:pt-0">
+                <div class="md:m-4 shadow-md shadow-slate-300 categories md:flex">
+                  <div class="w-full md:w-[10%] categories_menu my-3 text-slate-500 relative z-0 flex md:block">
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px] md:mt-3"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-print"></i></a>
+                    <a href="#" class="block w-full text-center py-1 text-2xl ml-1 mb-1 md:rounded-l-md md:border-slate-200 md:border-[1px]"><i class="fa-solid fa-play"></i></a>
                   </div>
-                  <a href="#" class="w-[90%] ml-auto my-3 relative z-10">
+                  <a href="#" class="w-full md:w-[90%] ml-auto my-3 relative z-10">
                     <img src="./assets/img/categories/04.jpg" class="w-full" alt="">
                   </a>
                 </div>

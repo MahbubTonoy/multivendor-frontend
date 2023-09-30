@@ -44,8 +44,12 @@
 }
 
 .categories_menu {
-  @apply opacity-0 duration-300;
+  @apply md:opacity-0 duration-300;
 }
 .categories:hover .categories_menu {
   @apply opacity-100;
+}
+
+#sidebarToggle:checked ~ .sidebar {
+  @apply right-0;
 }
